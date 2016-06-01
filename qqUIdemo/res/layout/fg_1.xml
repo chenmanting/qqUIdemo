@@ -3,10 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        >
+        <EditText 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="搜索内容"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="搜索"
+            android:textSize="10sp"
+            />
+        
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_margin="3dp"
+        />
     <ListView
-        android:id="@+id/list_messages"
+        android:id="@+id/list_dialogues"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

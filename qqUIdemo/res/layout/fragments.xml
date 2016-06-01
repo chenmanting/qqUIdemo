@@ -21,14 +21,14 @@
         android:orientation="horizontal" >
  
         <RadioButton
-            android:id="@+id/fg_message"
+            android:id="@+id/fg_dialogues"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:button="@null"
             android:checked="true"
-            android:drawableTop="@drawable/tab_selector_message"
+            android:drawableTop="@drawable/tab_selector_dialogue"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="2dp"
             android:text="消息"

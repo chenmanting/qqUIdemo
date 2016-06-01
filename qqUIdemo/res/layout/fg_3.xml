@@ -2,13 +2,212 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="#fff"
+    >
      
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="动态"
-        android:textSize="20sp"
-      />
+   <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="搜索电影/音乐/商品"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="搜索"
+            android:textSize="10sp"
+            />
+        
+    </LinearLayout>
+    
+   
+   <LinearLayout 
+       android:layout_width="wrap_content"
+       android:layout_height="80dip"
+       android:orientation="horizontal"
+       >
 
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:layout_weight="1"
+           android:gravity="center"
+           android:orientation="vertical"
+            >
+           <ImageView 
+               android:src="@drawable/qqzone"
+               android:layout_width="wrap_content"
+               android:layout_height="50dip"
+               android:layout_margin="5dip"
+               android:layout_centerVertical="true"
+               />
+           <TextView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:text="好友动态"
+               />
+       </LinearLayout>
+       
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:layout_weight="1"
+           android:gravity="center"
+           android:orientation="vertical"
+            >
+           <ImageView 
+               android:src="@drawable/nearby"
+               android:layout_width="wrap_content"
+               android:layout_height="50dip"
+               android:layout_margin="5dip"
+               android:layout_centerVertical="true"
+               />
+           <TextView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:text="附近"
+               />
+       </LinearLayout>
+       
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:layout_weight="1"
+           android:gravity="center"
+           android:orientation="vertical"
+            >
+           <ImageView 
+               android:src="@drawable/interests"
+               android:layout_width="wrap_content"
+               android:layout_height="50dip"
+               android:layout_margin="5dip"
+               android:layout_centerVertical="true"
+               />
+           <TextView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:text="兴趣部落"
+               />
+       </LinearLayout>
+       
+   </LinearLayout>
+     
+    <View android:layout_width="match_parent"
+        android:layout_height="10dip"
+        android:background="@android:color/darker_gray"
+        />
+   
+   <LinearLayout 
+       android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+       >
+       <ImageView 
+           android:layout_width="40dip"
+           android:layout_height="40dip"
+           android:src="@drawable/game"
+           />
+       <Button android:layout_width="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_height="40dip"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:text="游戏   "
+        android:textSize="20sp" 
+        />
+   </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
+   <LinearLayout 
+       android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+       >
+       <ImageView 
+           android:layout_width="40dip"
+           android:layout_height="40dip"
+           android:src="@drawable/focus"
+           />
+       <Button android:layout_width="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_height="40dip"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:text="看点   "
+        android:textSize="20sp" 
+        />
+   </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
+   <LinearLayout 
+       android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+       >
+       <ImageView 
+           android:layout_width="40dip"
+           android:layout_height="40dip"
+           android:src="@drawable/shop"
+           />
+       <Button android:layout_width="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_height="40dip"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:text="京东购物   "
+        android:textSize="20sp" 
+        />
+   </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
+   <LinearLayout 
+       android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+       >
+       <ImageView 
+           android:layout_width="40dip"
+           android:layout_height="40dip"
+           android:src="@drawable/nearby"
+           />
+       <Button android:layout_width="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_height="40dip"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:text="附近的群   "
+        android:textSize="20sp" 
+        />
+   </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
+ 
 </LinearLayout>

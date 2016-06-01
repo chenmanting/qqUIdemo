@@ -5,6 +5,7 @@ import com.cmt.qq.tool.MyDatabaseHelper;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -36,7 +37,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 	}
 
 	private void createDatabase() {
-		dbHelper = new MyDatabaseHelper(this, "User.db", null, 1);
+		dbHelper = new MyDatabaseHelper(this, "User.db", null, MyConstant.SQLITE_VERSION);
 		db = dbHelper.getWritableDatabase();
 	}
 
@@ -57,6 +58,11 @@ public class LoginActivity extends Activity implements OnClickListener{
 			
 			boolean login = login(username, password);
 			if(login){
+				//将用户信息存在SharedPreferences中
+				SharedPreferences.Editor editor = getSharedPreferences("user",MODE_PRIVATE).edit();
+				editor.putString("username", username);
+				editor.putString("password", password);
+				editor.commit();
 				Intent intent = new Intent(this,MainActivity.class);
 				//传输用户名
 				Bundle bundle = new Bundle();

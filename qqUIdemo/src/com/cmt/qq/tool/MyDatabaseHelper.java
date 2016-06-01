@@ -41,4 +41,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 				username, password});
 	}
 	
+	public void updatePassword(SQLiteDatabase db,String username, String newPassword){
+		db.execSQL("update User set password=? where username=?", 
+				new String[]{newPassword, username});
+	}
+	
 }

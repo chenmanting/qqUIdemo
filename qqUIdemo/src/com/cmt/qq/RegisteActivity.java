@@ -59,7 +59,7 @@ public class RegisteActivity extends Activity {
 	}
 
 	private void createDatabase() {
-		dbHelper = new MyDatabaseHelper(this, "User.db", null, 1);
+		dbHelper = new MyDatabaseHelper(this, "User.db", null, MyConstant.SQLITE_VERSION);
 		db = dbHelper.getWritableDatabase();
 	}
 
