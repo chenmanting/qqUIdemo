@@ -13,6 +13,9 @@ import android.view.View.OnClickListener;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,6 +26,8 @@ public class LoginActivity extends Activity implements OnClickListener{
 	private Button btnLogin;
 	private Button btnCancle;
 	private Button btnRegister;
+	private CheckBox checkboxRememberInfo;
+	
 	private MyDatabaseHelper dbHelper;
 	private SQLiteDatabase db;
 	
@@ -45,6 +50,21 @@ public class LoginActivity extends Activity implements OnClickListener{
 		btnLogin.setOnClickListener(this);
 		btnCancle.setOnClickListener(this);
 		btnRegister.setOnClickListener(this);
+		
+		checkboxRememberInfo.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked){
+					SharedPreferences pref =getSharedPreferences("user", MODE_PRIVATE);
+					String username = pref.getString("username", "");
+					String password = pref.getString("password", "");
+					editUsername.setText(username);
+					editPassword.setText(password);
+				}
+			}
+		});
+		
 	}
 	
 	@Override
@@ -62,6 +82,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 				SharedPreferences.Editor editor = getSharedPreferences("user",MODE_PRIVATE).edit();
 				editor.putString("username", username);
 				editor.putString("password", password);
+				editor.putBoolean("remember", checkboxRememberInfo.isChecked());
 				editor.commit();
 				Intent intent = new Intent(this,MainActivity.class);
 				//传输用户名
@@ -101,6 +122,17 @@ public class LoginActivity extends Activity implements OnClickListener{
 		btnLogin = (Button) findViewById(R.id.button_login);
 		btnCancle = (Button) findViewById(R.id.button_cancle);
 		btnRegister = (Button) findViewById(R.id.button_register);
+		checkboxRememberInfo = (CheckBox) findViewById(R.id.checkbox_rememberInfo);
+		
+		SharedPreferences pref =getSharedPreferences("user", MODE_PRIVATE);
+		boolean ischecked = pref.getBoolean("remember", false);
+		checkboxRememberInfo.setChecked(ischecked);
+		if(ischecked){
+			String username = pref.getString("username", "");
+			String password = pref.getString("password", "");
+			editUsername.setText(username);
+			editPassword.setText(password);
+		}
 	}
 	
 	

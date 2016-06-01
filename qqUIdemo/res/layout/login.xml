@@ -51,5 +51,15 @@
         android:layout_toLeftOf="@id/button_login"
         android:text="注册"
         />
+     <CheckBox 
+         android:id="@+id/checkbox_rememberInfo"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:checked="false"
+         android:layout_below="@id/edit_text_password"
+         android:layout_toLeftOf="@id/button_register"
+         android:text="记住信息"
+         android:textColor="#000"
+         />
 
 </RelativeLayout>

@@ -36,6 +36,14 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 				new String[]{username,password});
 	}
 	
+	public String queryPassword(SQLiteDatabase db, String username){
+		Cursor cursor = db.rawQuery("select * from User where 1=1 and username = ?",
+				new String[]{username});
+		if(cursor.moveToFirst())
+		return cursor.getString(2);
+		else return "";
+	}
+	
 	public void addUser(SQLiteDatabase db,String username,String password){
 		db.execSQL("insert into User values(null,?,?,null,null)", new String[] {
 				username, password});

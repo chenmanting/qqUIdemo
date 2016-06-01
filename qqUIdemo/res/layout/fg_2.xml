@@ -149,6 +149,10 @@
         android:background="#fff"
         android:text="-->   我的设备"
         android:textSize="20sp" />
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
     <Button android:layout_width="match_parent"
         android:layout_height="40dip"
         android:gravity="center_vertical"
@@ -165,18 +169,30 @@
         android:background="#fff"
         android:text="-->   分组一"
         android:textSize="20sp" />
+   	<View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
     <Button android:layout_width="match_parent"
         android:layout_height="40dip"
         android:gravity="center_vertical"
         android:background="#fff"
         android:text="-->   分组二"
         android:textSize="20sp" />
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
     <Button android:layout_width="match_parent"
         android:layout_height="40dip"
         android:gravity="center_vertical"
         android:background="#fff"
         android:text="-->   分组三"
         android:textSize="20sp" />
+    <View android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray"
+        />
     <Button android:layout_width="match_parent"
         android:layout_height="40dip"
         android:gravity="center_vertical"
